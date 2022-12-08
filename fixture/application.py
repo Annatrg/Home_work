@@ -1,6 +1,5 @@
 from selenium import webdriver
 from fixture.session import SessionHelper
-from fixture.navigation import NavigationHelper
 from fixture.project import ProjectHelper
 
 
@@ -12,11 +11,10 @@ class Application:
             self.wd = webdriver.Chrome()
         else:
             raise ValueError("Unrecognized browser %s" % browser)
-        self.wd.implicitly_wait(10)
+        self.wd.implicitly_wait(2)
       #  self.base_url = "https://www.google.com/"
         self.session = SessionHelper(self)
         self.base_url = base_url
-        self.navigation = NavigationHelper(self)
         self.project = ProjectHelper(self)
 
     def is_valid(self):
