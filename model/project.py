@@ -19,3 +19,4 @@ class Project:
 
     def for_sorted_by_name(self):
         return self.name
+

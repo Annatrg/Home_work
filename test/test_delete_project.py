@@ -14,5 +14,6 @@ def test_delete_project(app):
 
     app.project.delete_project(proj)
     new_projects = app.project.get_projects_list()
-
-    assert str(new_projects) not in str(old_projects)
+    old_projects.remove(Project)
+    assert sorted(old_projects, key=Project.for_sorted_by_name) == sorted(new_projects, key=Project.for_sorted_by_name)
+   # assert str(new_projects) not in str(old_projects)
