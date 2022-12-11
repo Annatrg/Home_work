@@ -22,4 +22,3 @@ class SignupHelper:
 
     def extract_confirmation_url(self, text):
         return re.search("http://.*$", text, re.MULTILINE).group(0)
-

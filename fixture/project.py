@@ -67,3 +67,4 @@ class ProjectHelper:
         self.open_projects_page()
         wd.find_element_by_xpath(f"//a[text() = '{name}']").click()
 
+

@@ -28,3 +28,4 @@ testdata = Project(name=random_string("project_name", 10),
                    view_status=random.choice(["private", "public"]),
                    description=random_string("description", 10),
                    inherit_global_categories=random.choice([True, False]))
+

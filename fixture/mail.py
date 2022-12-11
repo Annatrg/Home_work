@@ -25,4 +25,3 @@ class MailHelper:
             pop.close()
             time.sleep(3)
         return None
-
