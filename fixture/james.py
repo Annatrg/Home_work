@@ -46,3 +46,4 @@ class JamesHelper:
 
         def quit(self):
             self.write("quit\n")
+

@@ -17,7 +17,6 @@ def load_config(file):
     return target
 
 
-
 @pytest.fixture
 def app(request, config):
     global fixture
