@@ -22,4 +22,3 @@ def test_delete_project(app):
 
     assert sorted(old_projects, key=Project.name) == sorted(new_projects, key=Project.name)
    # assert str(new_projects) not in str(old_projects)
-

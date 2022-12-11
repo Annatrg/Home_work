@@ -14,4 +14,3 @@ def test_add_project(app):
     new_projects = app.soap.get_projects_list()
 
     assert sorted(old_projects, key=Project.name) == sorted(new_projects, key=Project.name)
-
