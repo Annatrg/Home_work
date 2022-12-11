@@ -8,12 +8,17 @@ def test_delete_project(app):
     if len(app.project.get_projects_list()) == 0:
        project = testdata
        app.project.add_project(project)
-    old_projects = app.project.get_projects_list()
+    # old_projects = app.project.get_projects_list()
+    old_projects = app.soap.get_projects_list()
+
     projects = app.project.get_projects_list()
     proj = random.choice(projects)
 
     app.project.delete_project(proj)
-    new_projects = app.project.get_projects_list()
     old_projects.remove(proj)
+
+    # new_projects = app.project.get_projects_list()
+    new_projects = app.soap.get_projects_list()
+
     assert sorted(old_projects, key=Project.name) == sorted(new_projects, key=Project.name)
    # assert str(new_projects) not in str(old_projects)
