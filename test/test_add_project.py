@@ -3,7 +3,6 @@ from generator.project import testdata
 
 
 def test_add_project(app):
-    app.session.login("administrator", "root")
     app.project.open_projects_page()
     old_projects = app.project.get_projects_list()
    # app.project.add_project(Project(name='Project_name', status='release', view_status='private',

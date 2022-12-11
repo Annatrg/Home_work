@@ -3,7 +3,6 @@ from generator.project import testdata
 import random
 
 def test_delete_project(app):
-    app.session.login("administrator", "root")
     app.project.open_projects_page()
     # выбираем проект для удаления
     if len(app.project.get_projects_list()) == 0:

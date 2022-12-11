@@ -16,6 +16,9 @@
     "port": 4555,
     "username": "root",
     "password": "root"
+  },
+  "admin": {
+    "username": "administrator",
+    "password": "root"
   }
 }
-
